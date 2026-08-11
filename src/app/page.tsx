@@ -46,10 +46,12 @@ export default function LandingPage() {
             Finanças+
           </div>
           <nav className="flex items-center gap-2">
-            <Button variant="ghost" render={<Link href="/login" />}>
+            <Button variant="ghost" nativeButton={false} render={<Link href="/login" />}>
               Entrar
             </Button>
-            <Button render={<Link href="/signup" />}>Criar conta</Button>
+            <Button nativeButton={false} render={<Link href="/signup" />}>
+              Criar conta
+            </Button>
           </nav>
         </div>
       </header>
@@ -64,11 +66,16 @@ export default function LandingPage() {
             sua saúde financeira com um dashboard simples e visual.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button size="lg" render={<Link href="/signup" />}>
+            <Button size="lg" nativeButton={false} render={<Link href="/signup" />}>
               Começar agora
               <ArrowRight className="size-4" />
             </Button>
-            <Button size="lg" variant="outline" render={<Link href="/login" />}>
+            <Button
+              size="lg"
+              variant="outline"
+              nativeButton={false}
+              render={<Link href="/login" />}
+            >
               Já tenho conta
             </Button>
           </div>
