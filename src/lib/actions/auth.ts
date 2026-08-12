@@ -7,6 +7,7 @@ import { createClient } from "@/lib/supabase/server";
 export interface AuthFormState {
   error?: string;
   success?: string;
+  email?: string;
 }
 
 export async function signIn(
@@ -68,6 +69,7 @@ export async function signUp(
 
   return {
     success: "Conta criada! Verifique seu e-mail para confirmar o cadastro antes de entrar.",
+    email,
   };
 }
 

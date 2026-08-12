@@ -14,6 +14,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const features = [
   {
@@ -46,6 +47,7 @@ export default function LandingPage() {
             Finanças+
           </div>
           <nav className="flex items-center gap-2">
+            <ThemeToggle />
             <Button variant="ghost" nativeButton={false} render={<Link href="/login" />}>
               Entrar
             </Button>
